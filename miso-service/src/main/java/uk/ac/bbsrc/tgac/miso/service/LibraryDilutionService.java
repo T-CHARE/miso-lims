@@ -7,7 +7,8 @@ import uk.ac.bbsrc.tgac.miso.core.data.Barcodable.EntityType;
 import uk.ac.bbsrc.tgac.miso.core.data.impl.LibraryDilution;
 import uk.ac.bbsrc.tgac.miso.core.util.PaginatedDataSource;
 
-public interface LibraryDilutionService extends PaginatedDataSource<LibraryDilution>, BarcodableService<LibraryDilution> {
+public interface LibraryDilutionService extends PaginatedDataSource<LibraryDilution>, BarcodableService<LibraryDilution>,
+    DeleterService<LibraryDilution> {
   @Override
   default EntityType getEntityType() {
     return EntityType.DILUTION;
